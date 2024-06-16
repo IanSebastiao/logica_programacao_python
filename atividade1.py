@@ -34,15 +34,15 @@ else:
 
     if imc <18.5:
         print('Abaixo do peso')
-    elif imc >18.5 <25:
+    elif imc <25:
         print('Peso normal')
-    elif imc >25 <30:
+    elif imc <30:
         print('Sobrepeso')
-    elif imc >30 <35:
+    elif imc <35:
         print('Obesidade grau 1')
-    elif imc >35 <40:
+    elif imc <40:
         print('Obesidade grau 2')
-    elif imc >=30:
+    else:
         print('Obesidade grau 3')
 finally:
     print('Fim do programa')
