@@ -8,4 +8,3 @@ if numero >=0:
 else:
     quadrado = numero**2
     print(quadrado)
-    
