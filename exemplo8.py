@@ -32,7 +32,7 @@ nomes = []
 
 while True:
     nome = input('Digite um nome:')
-    if nome == -'1':
+    if nome == '-1':
         break
     else:
         nomes.append(nome)
