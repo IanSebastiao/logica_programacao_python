@@ -27,6 +27,18 @@ c = int(input("Digite o valor de c: "))
 # Calcular e exibir o resultado
 delta = b**2 - 4*a*c
 
+if delta < 0:
+    print(f'Delta: {delta} - Não há raízes')
+elif delta == 0:
+    print(f'Delta: {delta} - Não é equação do segundo grau')
+else:
+    raiz1 = (-b + (delta**0.5)) / 2*a
+
+    raiz2 = (-b - (delta**0.5)) / 2*a
+
+    print(f'Delta: {delta} - raiz 1: {raiz1}, raiz 2: {raiz2}')
+
+'''
 if a == 0:
     print("Não é equação do segundo grau.")
 elif delta <0:
@@ -38,3 +50,4 @@ else:
     raiz1 = (-b + math.sqrt(delta)) / (2*a)
     raiz2 = (-b - math.sqrt(delta)) / (2*a)
     print("As raízes da esquação são:", raiz1, raiz2)
+'''
