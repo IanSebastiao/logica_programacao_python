@@ -8,6 +8,7 @@ if sexo == "Masculino":
 else:
     print('Seu peso ideal é:', round((62.1*h) -44.7,2))'''
 
+#Tratamento de erro
 
 try:
     altura = float(input('Digite sua altura: '))
