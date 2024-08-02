@@ -11,15 +11,9 @@ def conceito(ma):
         return 'E'
 
 def final(conceito):
-    if conceito == 'A':
+    if conceito == 'A' or 'B' or 'C':
         return 'Aprovado'
-    elif conceito == 'B':
-        return 'Aprovado'
-    elif conceito == 'C':
-        return 'Aprovado'
-    elif conceito == 'D':
-        return 'Reprovado'
-    elif conceito == 'E':
+    elif conceito == 'D' or 'E':
         return 'Reprovado'
 
 matricula = int(input('Digite sua matricula:'))
@@ -33,8 +27,8 @@ print(f'Sua matricula é: {matricula}')
 print(f'Suas notas são: {nota1} - {nota2} - {nota3}')
 print(f'A média de exercicios é de: {me}')
 print(f'A média de aproveitamento é de: {ma}')
-print(f'Seu conceito é: {conceito}')
-print(f'Você está {final}')
+print(f'Seu conceito é: {conceito(ma)}')
+print(f'Você está {final(conceito(ma))}')
 
 '''
 if ma >= 90:
@@ -58,4 +52,17 @@ elif conceito == 'D':
     final = 'Reprovado'
 elif conceito == 'E':
     final = 'Reprovado'
+
+
+def final(conceito):
+    if conceito == 'A':
+        return 'Aprovado'
+    elif conceito == 'B':
+        return 'Aprovado'
+    elif conceito == 'C':
+        return 'Aprovado'
+    elif conceito == 'D':
+        return 'Reprovado'
+    elif conceito == 'E':
+        return 'Reprovado'
 '''
