@@ -11,9 +11,9 @@ def conceito(ma):
         return 'E'
 
 def final(conceito):
-    if conceito == 'A' or 'B' or 'C':
+    if conceito == 'A' or conceito == 'B' or conceito == 'C':
         return 'Aprovado'
-    elif conceito == 'D' or 'E':
+    else:
         return 'Reprovado'
 
 matricula = int(input('Digite sua matricula:'))
