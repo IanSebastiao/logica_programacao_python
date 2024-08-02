@@ -1,11 +1,10 @@
-
 preco = float(input('Digite o valor do produto:'))
 
 print('Digite 1 para pagar à vista em dinheiro ou cheque, 10% de desconto')
 print('Digite 2 para pagar à vista no cartão de crédito, 15% de desconto')
 print('Digite 3 para dividir em 2 vezes, sem juros')
 print('Digite 4 para dividir em 3 vezes, com juros de 10%')
-
+                                                
 pagamento = input('Digite a forma de pagamento:')
 
 if pagamento == '1':
