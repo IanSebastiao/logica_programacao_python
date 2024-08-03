@@ -16,19 +16,23 @@ def final(conceito):
     else:
         return 'Reprovado'
 
-matricula = int(input('Digite sua matricula:'))
-nota1 = float(input('Digite sua nota1:'))
-nota2 = float(input('Digite sua nota2:'))
-nota3 = float(input('Digite sua nota3:'))
-me = float(input('Digite a média dos exercícios:'))
-ma = round((nota1 + nota2 *2 + nota3 * 3 + me) /7, 2)
+try:
+    matricula = int(input('Digite sua matricula:'))
+    nota1 = float(input('Digite sua nota1:'))
+    nota2 = float(input('Digite sua nota2:'))
+    nota3 = float(input('Digite sua nota3:'))
+    me = float(input('Digite a média dos exercícios:'))
+    ma = round((nota1 + nota2 *2 + nota3 * 3 + me) /7, 2)
 
-print(f'Sua matricula é: {matricula}')
-print(f'Suas notas são: {nota1} - {nota2} - {nota3}')
-print(f'A média de exercicios é de: {me}')
-print(f'A média de aproveitamento é de: {ma}')
-print(f'Seu conceito é: {conceito(ma)}')
-print(f'Você está {final(conceito(ma))}')
+    print(f'Sua matricula é: {matricula}')
+    print(f'Suas notas são: {nota1} - {nota2} - {nota3}')
+    print(f'A média de exercicios é de: {me}')
+    print(f'A média de aproveitamento é de: {ma}')
+    print(f'Seu conceito é: {conceito(ma)}')
+    print(f'Você está {final(conceito(ma))}')
+
+except Exception as e:
+    print(f'Ocorreu o seguinte erro: {e}')
 
 '''
 if ma >= 90:
