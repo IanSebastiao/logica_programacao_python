@@ -23,7 +23,7 @@ while True:
 for n in range(len(produtos)):
     print(f'Item {n+1}: {produtos[n]} - Valor: {precos[n]} - Quantidade: {qtdes[n]}')
 
-print(f'\nValor total: {total}')
+print(f'Valor total: {total}')
 print('\nForma de pagamento')
 print('Digite 1 para pagar à vista em dinheiro ou cheque, 10% de desconto')
 print('Digite 2 para pagar à vista no cartão de crédito, 15% de desconto')
