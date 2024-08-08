@@ -58,6 +58,18 @@ for aluno in alunos:
     impressao(aluno)
     print('')
 
+busca = input('Digite a matricula do aluno que deseja ver os dados: ')
+achei = ''
+for aluno in alunos:
+    if busca == aluno.matricula:
+        achei = aluno.matricula
+        break
+
+if achei != '':
+    impressao(achei)
+else:
+    print('Matricula não encontrada')
+
 
 '''
     nota1 = float(input('Digite sua nota 1: '))
