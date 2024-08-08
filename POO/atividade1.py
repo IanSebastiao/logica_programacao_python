@@ -1,5 +1,5 @@
 class Aluno:
-    def __init__(self,matricula='',nome='',notas=[]):
+    def __init__(self,nome='',matricula='',notas=[]):
         self.matricula = matricula
         self.nome = nome
         self.notas = notas
@@ -27,8 +27,8 @@ class Aluno:
         
 
 def impressao(aluno):
-    print(f'Matricula: {aluno.matricula}')
     print(f'Aluno: {aluno.nome}')
+    print(f'Matricula: {aluno.matricula}')
     print(f'Notas: {aluno.notas}')
     print(f'Média: {round(aluno.media, 1)}')
     print(f'Conceito: {aluno.conceito}')
@@ -40,12 +40,9 @@ while True:
     notas = []
     nome = input('Digite seu nome: ')
     matricula = input('Digite sua matricula: ')
-    nota1 = float(input('Digite sua nota 1: '))
-    nota2 = float(input('Digite sua nota 2: '))
-    nota3 = float(input('Digite sua nota 3: '))
-    notas.append(nota1)
-    notas.append(nota2)
-    notas.append(nota3)
+    for i in range(3):
+        nota = float(input(f'Digite a nota {i+1}: '))
+        notas.append(nota)
     aluno = Aluno(nome, matricula, notas)
     aluno.media = sum(aluno.notas) / len(aluno.notas)
     aluno.conceito = aluno.conceito_aluno()
@@ -59,3 +56,14 @@ while True:
 
 for aluno in alunos:
     impressao(aluno)
+    print('')
+
+
+'''
+    nota1 = float(input('Digite sua nota 1: '))
+    nota2 = float(input('Digite sua nota 2: '))
+    nota3 = float(input('Digite sua nota 3: '))
+    notas.append(nota1)
+    notas.append(nota2)
+    notas.append(nota3)
+'''
