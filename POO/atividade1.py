@@ -1,5 +1,5 @@
 class Aluno:
-    def __init__(self,matricula,nome,notas):
+    def __init__(self,matricula='',nome='',notas=[]):
         self.matricula = matricula
         self.nome = nome
         self.notas = notas
@@ -26,6 +26,14 @@ class Aluno:
             return 'Reprovado'
         
 
+def impressao(aluno):
+    print(f'Matricula: {aluno.matricula}')
+    print(f'Aluno: {aluno.nome}')
+    print(f'Notas: {aluno.notas}')
+    print(f'Média: {round(aluno.media, 1)}')
+    print(f'Conceito: {aluno.conceito}')
+    print(f'Resultado: {aluno.resultado}')
+
 alunos = []
 
 while True:
@@ -49,5 +57,5 @@ while True:
     if s.upper() == 'S':
         break
 
-    
-
+for aluno in alunos:
+    impressao(aluno)
