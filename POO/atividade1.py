@@ -62,7 +62,7 @@ busca = input('Digite a matricula do aluno que deseja ver os dados: ')
 achei = ''
 for aluno in alunos:
     if busca == aluno.matricula:
-        achei = aluno.matricula
+        achei = aluno
         break
 
 if achei != '':
