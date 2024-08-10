@@ -18,7 +18,7 @@ def impressao(produto):
     print(f'Produto: {produto.nome}')
     print(f'Codigo do produto: {produto.codigo}')
     print(f'Preço do produto: {produto.preco}')
-    print(f'Quantidade de produtos: {produto.quantidade}')
+    print(f'Quantidade em estoque: {produto.quantidade}')
 
 def cadastro():
     nome = input(('Nome do produto: '))
@@ -54,23 +54,61 @@ def lista(produtos):
 def venda(produtos):
     print('###### Venda de Produto ######')
     busca = int(input('Digite o codigo do produto: '))
-    perc = float(input('Digite o percentual do desconto: '))
+    perc = None
+    quant = 0
     achei = None
+    estoque = True
     valor_desconto = 0.0
 
     for produto in produtos:
         if busca == produto.codigo:
             achei = produto
+            quant = int(input('Digite a quantidade: '))
+            if quant > produto.quantidade:
+                estoque = False
+                break
+            produto.quantidade -= quant 
+            perc = float(input('Digite o percentual do desconto: '))
             valor_desconto = produto.desconto(perc)
-            produto.preco = valor_desconto
+
             break
 
-    if achei is not None:
+    if achei is not None and estoque:
         impressao(achei)
+        print(f'Preço com desconto: {valor_desconto}')
+        print(f'Total: {valor_desconto * quant}')
+        print()
+    elif not estoque:
+        print(f'Estoque insuficiente: {produto.quantidade}')
     else:
         print('Produto não encontrado')
 
 def reajuste(produtos):
+    print('###### Reajuste de Produto ######')
+    busca = int(input('Digite o codigo do produto: '))
+    perc = None
+    quant = 0
+    achei = None
+    valor_reajuste = 0.0
+
+    for produto in produtos:
+        if busca == produto.codigo:
+            achei = produto
+            quant = int(input('Digite a quantidade: '))
+            perc = float(input('Digite o percentual do aumento: '))
+            valor_reajuste = produto.reajuste(perc)
+
+            break
+
+    if achei is not None:
+        impressao(achei)
+        print(f'Preço com desconto: {valor_reajuste}')
+        print(f'Total: {valor_reajuste * quant}')
+        print()
+    else:
+        print('Produto não encontrado')
+
+'''def reajuste(produtos):
     print('###### Reajuste de Produto ######')
     busca = int(input('Digite o codigo do produto: '))
     perc = float(input('Digite o percentual do aumento: '))
@@ -87,7 +125,7 @@ def reajuste(produtos):
     if achei is not None:
         impressao(achei)
     else:
-        print('Produto não encontrado')
+        print('Produto não encontrado')'''
     
 produtos = []
 
@@ -97,7 +135,7 @@ while True:
                     '\n2 - Para pesquisar produto'
                     '\n3 - Para impressão da lista de produtos'
                     '\n4 - Para venda do produto' 
-                    '\n5 - Para reajuste'
+                    '\n5 - Para reajuste: '
                     ))
 
     if opcao == 1:
