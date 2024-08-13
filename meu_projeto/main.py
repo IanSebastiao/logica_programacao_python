@@ -1,11 +1,11 @@
 
-from services.cadastro import cadastro
-from services.vendas import venda
-from services.lista import lista
-from services.reajuste import reajuste
-from services.pesquisa import pesquisa
-from services.cliente import cliente
-from services.funcionario import funcionario
+from services.administracao.cadastro import cadastro
+from services.caixa.vendas import venda
+from services.caixa.lista import lista
+from services.administracao.reajuste import reajuste
+from services.caixa.pesquisa import pesquisa
+from services.administracao.cliente import cliente
+from services.administracao.funcionario import funcionario
 
     
 produtos = []
