@@ -1,4 +1,4 @@
-from services import impressao
+from meu_projeto.utils import impressao
 
 
 def lista(produtos):
