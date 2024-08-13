@@ -9,6 +9,7 @@ def cliente():
     email = input('Digite seu email: ')
     endereco = input('Digite seu endereço: ')
 
-    cliente = Cliente(nome, sexo, cpf, telefone, email, endereco)
+    cliente = Cliente(nome, sexo, cpf, telefone, email)
+    cliente.endereco = endereco
 
     return cliente
