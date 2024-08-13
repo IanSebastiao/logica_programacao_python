@@ -1,6 +1,9 @@
 
-from services import cadastro, lista, pesquisa, reajuste
+from services.cadastro import cadastro
 from services.vendas import venda
+from services.lista import lista
+from services.reajuste import reajuste
+from services.pesquisa import pesquisa
 
     
 produtos = []

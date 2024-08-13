@@ -1,4 +1,4 @@
-from meu_projeto.utils import impressao
+from utils.impressao import impressao
 
 
 def pesquisa(produtos):

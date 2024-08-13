@@ -1,4 +1,4 @@
-from meu_projeto.utils import impressao
+from utils.impressao import impressao
 
 
 def reajuste(produtos):
@@ -12,10 +12,10 @@ def reajuste(produtos):
     for produto in produtos:
         if busca == produto.codigo:
             achei = produto
-            quant = int(input('Digite a quantidade: '))
             perc = float(input('Digite o percentual do aumento: '))
             valor_reajuste = produto.reajuste(perc)
-
+            produto.preco = valor_reajuste
+ 
             break
 
     if achei is not None:
