@@ -5,6 +5,7 @@ from services.caixa.lista import lista
 from services.administracao.reajuste import reajuste
 from services.caixa.pesquisa import pesquisa
 from utils.cadastro_pessoa import cadastro_pessoa
+from utils.impressao_dados import impressao_dados
 
     
 produtos = []
@@ -19,7 +20,9 @@ while True:
                     '\n4 - Para venda do produto' 
                     '\n5 - Para reajuste '
                     '\n6 - Para o cadastro do cliente '
-                    '\n7 - Para o cadastro do funcionario: \n'
+                    '\n7 - Para o cadastro do funcionario'
+                    '\n8 - Para exibir o cadastro do cliente: \n'
+                    '\n9 - Para exibir o cadastro do funcionario: \n'
                     ))
 
     if opcao == 1:
@@ -42,6 +45,12 @@ while True:
 
     elif opcao == 7: 
         funcionarios.append(cadastro_pessoa(2))
+
+    elif opcao == 8:
+        impressao_dados(produtos)
+
+    elif opcao == 9:
+        lista(produtos)
 
     else:
         print('Opção Inválida')
