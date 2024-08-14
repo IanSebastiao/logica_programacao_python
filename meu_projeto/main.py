@@ -49,5 +49,5 @@ while True:
 
     s = input('Digite S para sair ou ENTER para continuar: ')
     if s.upper() == 'S':
-        break
+        break 
 
