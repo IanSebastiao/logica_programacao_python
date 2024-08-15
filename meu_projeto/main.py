@@ -21,7 +21,7 @@ def main():
                         '\n5 - Para reajuste '
                         '\n6 - Para o cadastro do cliente '
                         '\n7 - Para o cadastro do funcionario'
-                        '\n8 - Para exibir o cadastro do cliente: \n'
+                        '\n8 - Para exibir o cadastro do cliente'
                         '\n9 - Para exibir o cadastro do funcionario: \n'
                         ))
 
