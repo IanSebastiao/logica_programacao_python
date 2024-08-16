@@ -6,7 +6,8 @@ from services.administracao.reajuste import reajuste
 from services.caixa.pesquisa import pesquisa
 from utils.cadastro_pessoa import cadastro_pessoa
 from utils.impressao_dados import impressao_dados
-from services.administracao import pesquisa_dados
+from services.administracao.pesquisa_dados import pesquisa_cliente
+from services.administracao.pesquisa_dados import pesquisa_funcionario
 
 
 def main():
@@ -49,14 +50,14 @@ def main():
             funcionarios.append(cadastro_pessoa(2))
 
         elif opcao == 8:
-            cliente = pesquisa_dados(clientes)
+            cliente = pesquisa_cliente(clientes)
             if cliente is not None:
                 impressao_dados(cliente, 1)
             else:
                 print('Cliente não cadastrado!')
 
         elif opcao == 9:
-            funcionario = pesquisa_dados(funcionarios)
+            funcionario = pesquisa_funcionario(funcionarios)
             if funcionario is not None:
                 impressao_dados(funcionarios, 2)
             else:
