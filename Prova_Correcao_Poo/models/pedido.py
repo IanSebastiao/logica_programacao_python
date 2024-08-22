@@ -17,7 +17,7 @@ class Pedido():
         return total
     
     def detalhes_pedido(self):
-        print(f'Total: {p.total_pedido()}')
+        print(f'Total: {self.total_pedido()}')
     
 pizza1 = Pizza('Calabresa', 'M')
 pizza1.calcular_preco()
