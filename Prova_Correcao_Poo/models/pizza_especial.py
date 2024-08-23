@@ -20,7 +20,8 @@ class PizzaEspecial(Pizza):
         print(f'Preço Adicionais: {self.calcular_adicional()}')
 
 
-pizza = PizzaEspecial('Calabresa', 'M', ['Cheddar', 'Catupiry']) 
-pizza.calcular_preco()
-pizza.detalhes()
-pizza.detalhes_especiais()
+
+# pizza = PizzaEspecial('Calabresa', 'M', ['Cheddar', 'Catupiry']) 
+# pizza.calcular_preco()
+# pizza.detalhes()
+# pizza.detalhes_especiais()

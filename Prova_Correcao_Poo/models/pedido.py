@@ -1,3 +1,4 @@
+from pizza_especial import PizzaEspecial
 from pizza import Pizza
 
 
@@ -13,21 +14,28 @@ class Pedido():
         total = 0
         for pizza in self.pizzas:
             total += pizza.preco
+            if isinstance(pizza, PizzaEspecial):
+                total += pizza.calcular_adicional()
 
         return total
     
     def detalhes_pedido(self):
-        print(f'Total: {self.total_pedido()}')
+        print(f'Pedido: {self.numero_pedido}; R${self.total_pedido():.2f}')
     
-pizza1 = Pizza('Calabresa', 'M')
-pizza1.calcular_preco()
-pizza2 = Pizza('Frango', 'G')
-pizza2.calcular_preco()
-p = Pedido(1001)
-p.adicionar_pizza(pizza1)
-p.adicionar_pizza(pizza2)
+# pizza1 = Pizza('Calabresa', 'M')
+# pizza1.calcular_preco()
+# pizza2 = Pizza('Frango', 'G')
+# pizza2.calcular_preco()
+# pizza3 = PizzaEspecial('Calabresa', 'M', ['Cheddar', 'Bacon'])
+# pizza3.calcular_preco()
+# p = Pedido(1001)
+# p.adicionar_pizza(pizza1)
+# p.adicionar_pizza(pizza2)
+# p.adicionar_pizza(pizza3)
 
-for pizza in p.pizzas:
-    pizza.detalhes()
+# for pizza in p.pizzas:
+#     pizza.detalhes()
+#     if isinstance(pizza, PizzaEspecial):
+#         pizza.detalhes_especiais()
 
-p.detalhes_pedido()
+# p.detalhes_pedido()
