@@ -25,6 +25,8 @@ if escolha.upper() == 'S':
                           ''')
         lista_adicionais.append(adicional)
         escolha = input('Deseja mais algum adicional [S - Sim, N - Não]')
+        pizza = PizzaEspecial(pizzas[op-1], tamanho, lista_adicionais)
+        pizza.calcular_preco()
 else:
     pizza = Pizza(pizzas[op-1], tamanho)
     pizza.calcular_preco()
