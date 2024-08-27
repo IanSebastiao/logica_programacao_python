@@ -1,5 +1,4 @@
 from pizza_especial import PizzaEspecial
-from pizza import Pizza
 
 
 class Pedido():
